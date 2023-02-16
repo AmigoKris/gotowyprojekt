@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+    <title>Mój Projekt</title>
+</head>
+<body onload="zegarek()">
+    <div id="zegar"></div>
+    <script>
+        function zegarek()
+        {
+            var data = new Date();
+            var godzina = data.getHours();
+            var minuta = data.getMinutes();
+            var sekunda = data.getSeconds();
+            var dzien = data.getDate();
+            var dzienN = data.getDay();
+            var miesiac = data.getMonth();
+            var rok = data.getFullYear();
+           
+            if (minuta < 10) minuta = "0" + minuta;
+            if (sekunda < 10) sekunda = "0" + sekunda;
+           
+            var dni = new Array("niedziela", "poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota");
+            var miesiace = new Array("stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "września", "października", "listopada", "grudnia");
+           
+            var pokazDate = "Dzisiaj jest " + dni[dzienN] + ', ' + dzien + ' ' + miesiace[miesiac] + ' ' + rok + " roku.<br />Godzina " + godzina + ':' + minuta + ':' + sekunda;
+            document.getElementById("zegar").innerHTML = pokazDate;
+           
+            setTimeout(zegarek, 1000);            
+        }        
+    </script>
+    <h1>O Mnie</h1>
+    
+    <h3>Zdane klasyfikacje
+        <ol type="I">
+            <li>inf02</li>
+            <li>inf03</li>
+        </ol>
+    </h3>
+    <h3>Znane mi języki programowania
+        <ul>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>PHP</li>
+        </ul>
+    </h3>
+    <h4>Inne 
+        <ol >
+            <li>Znajomość języka Angielskiego w stopniu komunikatywnym</li>
+       <li>Umiejętność pracy w zespole oraz inwidualnie</li> 
+       <li>Certyfikat CISCO 
+    </li>
+</ol>
+    </h4>
+    <h1>Absolwent Technikum nr19</h1>
+    <center><img src="t19.jpg" alt="Technikum" width="75%"></center>
+    
+    
+    <p><a href="mailto:stammkris161@gmail.com">Jeśli potrzebny jest Ci kontakt napisz do Mnie</a></p>
+</body>
+</html>

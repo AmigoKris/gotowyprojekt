@@ -1,0 +1,22 @@
+h1{
+    text-align: center;
+}
+#zegar{
+    border-style:groove;
+    border-color: black;
+    text-align: center;
+    color: blue;
+
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color:burlywood ;
+}
+#img{
+    
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        
+    
+}
